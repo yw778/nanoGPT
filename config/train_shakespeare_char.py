@@ -1,6 +1,8 @@
 # train a miniature character-level shakespeare model
 # good for debugging and playing on macbooks and such
 
+# torchrun --standalone --nproc_per_node=8 train.py config/train_shakespeare_char.py
+
 out_dir = 'out-shakespeare-char'
 eval_interval = 250 # keep frequent because we'll overfit
 eval_iters = 200
